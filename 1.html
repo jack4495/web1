@@ -4,17 +4,30 @@
 <head>
   <title>WEB1 - html</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
+  <script src="colors.js"></script>
 </head>
-<body>
+<body stlye="background-color:black;">
   <h1><a href="index.html">WEB</a></h1>
-  <div id="grid">
-      <ol>
-      <li><a href="1.html">HTML</a></li>
-      <li><a href="2.html">CSS</a></li>
-      <li><a href="3.html">JavaScript</a></li>
-    </ol>
-    <div id="article">
+  <input id="night_day" type="button" value="night" onclick="
+if(document.querySelector('#night_day').value === 'night'){
+  document.querySelector('body').style.backgroundColor='black';
+  document.querySelector('body').style.color='white';
+  document.querySelector('#night_day').value = 'day'
+} else {
+  document.querySelector('body').style.backgroundColor='white';
+  document.querySelector('body').style.color='black';
+  document.querySelector('#night_day').value = 'night'
+  }
+">
+<input type="button" value="night" onclick="
+  nightDayHandler(this);
+  ">
+<ol>
+  <li><a href="1.html">HTML</a></li>
+  <li><a href="2.html">CSS</a></li>
+  <li><a href="3.html">JavaScript</a></li>
+</ol>
+
   <h2>HTML</h2>
     <p><a href="https://www.naver.com/" target="_blank" title="naver">
     Hypertext Markup Language (HTML)</a> is the
